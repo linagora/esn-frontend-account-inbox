@@ -1,2 +1,2 @@
 # esn-frontend-account-inbox
-ntermediary frontend module for Inbox and account
+intermediary frontend module for Inbox and account
