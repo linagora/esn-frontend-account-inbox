@@ -1,10 +1,7 @@
-(function(angular) {
-  'use strict';
+'use strict';
 
-  angular.module('esn-frontend-account-inbox')
+angular.module('esn.account-inbox')
 
-    .component('inboxIdentitiesSubheader', {
-      template: require("./identities-subheader.pug")
-    });
-
-})(angular);
+  .component('inboxIdentitiesSubheader', {
+    template: require("./identities-subheader.pug")
+  });

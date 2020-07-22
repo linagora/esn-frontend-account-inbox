@@ -1,15 +1,12 @@
-(function(angular) {
-  'use strict';
+'use strict';
 
-  angular.module('esn-frontend-account-inbox')
+angular.module('esn.account-inbox')
 
-    .component('identityForm', {
-      template: require("./identity-form.pug"),
-      bindings: {
-        identity: '<',
-        userId: '<'
-      },
-      controller: 'identityFormController'
-    });
-
-})(angular);
+  .component('identityForm', {
+    template: require("./identity-form.pug"),
+    bindings: {
+      identity: '<',
+      userId: '<'
+    },
+    controller: 'identityFormController'
+  });

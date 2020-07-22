@@ -13,7 +13,7 @@ describe('The inboxIdentityCreateController', function() {
   beforeEach(function() {
     userId = 'userId';
 
-    module('esn-frontend-account-inbox');
+    module('esn.account-inbox');
 
     module(function($provide) {
       $provide.value('asyncAction', function(message, action) {
