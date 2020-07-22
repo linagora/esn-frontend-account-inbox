@@ -12,7 +12,7 @@ sub-header
   .message {{ 'A problem occurred while getting data, try refreshing this page!' | translate }}
 
 .inbox-identities(ng-if="$ctrl.status === 'loaded'")
-  inbox-identity(
+  identity(
     ng-repeat="identity in $ctrl.identities track by identity.uuid",
     identity="identity",
     can-edit="$ctrl.canEdit",

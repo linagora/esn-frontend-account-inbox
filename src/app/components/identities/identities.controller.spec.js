@@ -15,7 +15,7 @@ describe('The inboxIdentitiesController', function() {
     identities = [{ a: 1 }, { b: 2 }];
     user = { _id: 'userId' };
 
-    module('esn-frontend-account-inbox');
+    module('esn.account-inbox');
 
     inject(function(
       _$q_,

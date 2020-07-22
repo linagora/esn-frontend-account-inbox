@@ -14,7 +14,7 @@ describe('The inboxIdentityRemoveController', function() {
     userId = 'userId';
     identity = { uuid: 'uuid' };
 
-    module('esn-frontend-account-inbox');
+    module('esn.account-inbox');
 
     module(function($provide) {
       $provide.value('asyncAction', function(message, action) {

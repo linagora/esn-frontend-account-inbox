@@ -5,7 +5,7 @@ describe('The inboxUsersIdentitiesClient service', function() {
   var $httpBackend;
   var inboxUsersIdentitiesClient;
 
-  beforeEach(module('esn-frontend-account-inbox'));
+  beforeEach(module('esn.account-inbox'));
 
   beforeEach(inject(function(_$httpBackend_, _inboxUsersIdentitiesClient_) {
     $httpBackend = _$httpBackend_;
