@@ -1,0 +1,16 @@
+{
+    "name": "esn-frontend-account-inbox",
+    "version": "0.1.0",
+    "description": "Intermediary frontend module between Inbox and Account frontends for the OpenPaaS Suite - https://open-paas.org/",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:dev": "webpack"
+    },
+    "author": "",
+    "license": "AGPLv3",
+    "dependencies": {
+        "esn-frontend-common-libs": "github:openpaas-suite/esn-frontend-common-libs#main",
+        "esn-frontend-inbox": "git@github.com:OpenPaaS-Suite/esn-frontend-inbox#main"
+    }
+}
