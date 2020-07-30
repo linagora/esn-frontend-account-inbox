@@ -11,6 +11,6 @@
     "license": "AGPLv3",
     "dependencies": {
         "esn-frontend-common-libs": "github:openpaas-suite/esn-frontend-common-libs#main",
-        "esn-frontend-inbox": "git@github.com:OpenPaaS-Suite/esn-frontend-inbox#main"
+        "esn-frontend-inbox": "github:openpaas-suite/esn-frontend-inbox#main"
     }
 }
