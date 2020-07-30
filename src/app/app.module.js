@@ -6,6 +6,7 @@ angular.module('esn.account-inbox', [
   'esn.async-action',
   'esn.i18n',
   'esn.subheader',
+  'esn.summernote-wrapper',
   'esn.inbox.libs'
 ]);
 
@@ -17,6 +18,7 @@ require('esn-frontend-common-libs/src/frontend/js/modules/session.js');
 require('esn-frontend-common-libs/src/frontend/js/modules/async-action.js');
 require('esn-frontend-common-libs/src/frontend/js/modules/i18n/i18n.module.js');
 require('esn-frontend-common-libs/src/frontend/js/modules/subheader/subheader.module.js');
+require('esn-frontend-common-libs/src/frontend/js/modules/esn.summernote.js');
 
 require('./components/identities/subheader/identities-subheader.js');
 require('./components/identities/tab/identites-tab.component.js');
