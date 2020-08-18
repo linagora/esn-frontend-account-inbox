@@ -10,7 +10,6 @@ angular.module('esn.account-inbox', [
   'esn.inbox.libs'
 ]);
 
-require('esn-frontend-inbox/src/esn.inbox.libs/app/app.module.js')
 require('esn-frontend-inbox/src/esn.inbox.libs/app/app.constants.js');
 require('esn-frontend-inbox/src/esn.inbox.libs/app/services/inbox-restangular.service.js');
 require('esn-frontend-common-libs/src/frontend/js/modules/config/config.module.js');
