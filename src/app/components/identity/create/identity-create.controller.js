@@ -1,42 +1,44 @@
-'use strict';
-
 require('../../../services/identities/identities.service.js');
 require('../../identities/identities.constants.js');
 
-angular.module('esn.account-inbox')
-  .controller('identityCreateController', identityCreateController);
+(function(angular) {
+  'use strict';
 
-function identityCreateController(
-  $rootScope,
-  asyncAction,
-  userId,
-  identitiesService,
-  INBOX_IDENTITIES_EVENTS
-) {
-  var self = this;
+  angular.module('esn-frontend-account-inbox')
+    .controller('identityCreateController', identityCreateController);
 
-  self.init = init;
-  self.onCreateBtnClick = onCreateBtnClick;
+  function identityCreateController(
+    $rootScope,
+    asyncAction,
+    userId,
+    identitiesService,
+    INBOX_IDENTITIES_EVENTS
+  ) {
+    var self = this;
 
-  function init() {
-    self.userId = userId;
-    self.identity = {};
-  }
+    self.init = init;
+    self.onCreateBtnClick = onCreateBtnClick;
 
-  function onCreateBtnClick() {
-    return asyncAction({
-      progressing: 'Creating identity...',
-      success: 'Identity created',
-      failure: 'Failed to create identity'
-    }, function () {
-      return _storeIdentity();
-    });
-  }
+    function init() {
+      self.userId = userId;
+      self.identity = {};
+    }
 
-  function _storeIdentity() {
-    return identitiesService.storeIdentity(self.identity, userId)
-      .then(updatedIdentities => {
-        $rootScope.$broadcast(INBOX_IDENTITIES_EVENTS.UPDATED, updatedIdentities);
+    function onCreateBtnClick() {
+      return asyncAction({
+        progressing: 'Creating identity...',
+        success: 'Identity created',
+        failure: 'Failed to create identity'
+      }, function() {
+        return _storeIdentity();
       });
+    }
+
+    function _storeIdentity() {
+      return identitiesService.storeIdentity(self.identity, userId)
+        .then(updatedIdentities => {
+          $rootScope.$broadcast(INBOX_IDENTITIES_EVENTS.UPDATED, updatedIdentities);
+        });
+    }
   }
-}
+})(angular);

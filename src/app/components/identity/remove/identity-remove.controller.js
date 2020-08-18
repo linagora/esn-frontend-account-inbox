@@ -1,42 +1,44 @@
-'use strict';
-
 require('../../../services/identities/identities.service.js');
 require('../../identities/identities.constants.js');
 
-angular.module('esn.account-inbox')
-  .controller('identityRemoveController', identityRemoveController);
+(function(angular) {
+  'use strict';
 
-function identityRemoveController(
-  $rootScope,
-  asyncAction,
-  identity,
-  userId,
-  inboxIdentitiesService,
-  INBOX_IDENTITIES_EVENTS
-) {
-  var self = this;
+  angular.module('esn-frontend-account-inbox')
+    .controller('identityRemoveController', identityRemoveController);
 
-  self.init = init;
-  self.onRemoveBtnClick = onRemoveBtnClick;
+  function identityRemoveController(
+    $rootScope,
+    asyncAction,
+    identity,
+    userId,
+    inboxIdentitiesService,
+    INBOX_IDENTITIES_EVENTS
+  ) {
+    var self = this;
 
-  function init() {
-    self.identity = identity;
-  }
+    self.init = init;
+    self.onRemoveBtnClick = onRemoveBtnClick;
 
-  function onRemoveBtnClick() {
-    return asyncAction({
-      progressing: 'Removing identity...',
-      success: 'Identity removed',
-      failure: 'Failed to remove identity'
-    }, function () {
-      return _removeIdentity();
-    });
-  }
+    function init() {
+      self.identity = identity;
+    }
 
-  function _removeIdentity() {
-    return inboxIdentitiesService.removeIdentity(self.identity.uuid, userId)
-      .then(updatedIdentities => {
-        $rootScope.$broadcast(INBOX_IDENTITIES_EVENTS.UPDATED, updatedIdentities);
+    function onRemoveBtnClick() {
+      return asyncAction({
+        progressing: 'Removing identity...',
+        success: 'Identity removed',
+        failure: 'Failed to remove identity'
+      }, function() {
+        return _removeIdentity();
       });
+    }
+
+    function _removeIdentity() {
+      return inboxIdentitiesService.removeIdentity(self.identity.uuid, userId)
+        .then(updatedIdentities => {
+          $rootScope.$broadcast(INBOX_IDENTITIES_EVENTS.UPDATED, updatedIdentities);
+        });
+    }
   }
-}
+})(angular);

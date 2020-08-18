@@ -1,11 +1,14 @@
-'use strict';
+(function(angular) {
+  'use strict';
 
-angular.module('esn.account-inbox')
+  angular.module('esn-frontend-account-inbox')
 
-  .component('inboxIdentities', {
-    template: require("./identities.pug"),
-    controller: 'identitiesController',
-    bindings: {
-      user: '<'
-    }
-  });
+    .component('inboxIdentities', {
+      template: require("./identities.pug"),
+      controller: 'inboxIdentitiesController',
+      bindings: {
+        user: '<'
+      }
+    });
+
+})(angular);

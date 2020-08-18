@@ -14,7 +14,7 @@ describe('The inboxIdentityEditController', function() {
     userId = 'userId';
     identity = { foo: 'bar' };
 
-    module('esn.account-inbox');
+    module('esn-frontend-account-inbox');
 
     module(function($provide) {
       $provide.value('asyncAction', function(message, action) {

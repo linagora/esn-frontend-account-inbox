@@ -10,7 +10,28 @@
     "author": "",
     "license": "AGPLv3",
     "dependencies": {
+        "angular": "1.3.20",
         "esn-frontend-common-libs": "github:openpaas-suite/esn-frontend-common-libs#main",
-        "esn-frontend-inbox": "git@github.com:OpenPaaS-Suite/esn-frontend-inbox#main"
+        "esn-frontend-inbox": "github:openpaas-suite/esn-frontend-inbox#main",
+        "lodash": "2.4.1"
+    },
+    "devDependencies": {
+        "css-loader": "^3.6.0",
+        "exports-loader": "^1.0.0",
+        "expose-loader": "^1.0.0",
+        "file-loader": "^6.0.0",
+        "glob-all": "^3.2.1",
+        "html-loader": "^1.1.0",
+        "html-webpack-plugin": "^4.3.0",
+        "less-loader": "^6.1.1",
+        "pug": "^3.0.0",
+        "pug-html-loader": "^1.1.5",
+        "pug-loader": "^2.4.0",
+        "style-loader": "^1.2.1",
+        "svg-inline-loader": "^0.8.2",
+        "url-loader": "^4.1.0",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.11.0"
     }
 }

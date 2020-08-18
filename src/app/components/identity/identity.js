@@ -1,13 +1,15 @@
-'use strict';
+(function(angular) {
+  'use strict';
 
-angular.module('esn.account-inbox')
+  angular.module('esn-frontend-account-inbox')
 
-  .component('identity', {
-    template: require("./identity.pug"),
-    bindings: {
-      identity: '<',
-      canEdit: '<',
-      user: '<'
-    },
-    controller: 'identityController'
-  });
+    .component('identity', {
+      template: require("./identity.pug"),
+      bindings: {
+        identity: '<',
+        canEdit: '<',
+        user: '<'
+      },
+      controller: 'identityController'
+    });
+})(angular);

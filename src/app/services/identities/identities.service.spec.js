@@ -8,7 +8,7 @@ describe('The identitiesService factory', function() {
 
   var $rootScope, config, session, identitiesService, identities, inboxUsersIdentitiesClient, userId;
 
-  beforeEach(module('esn.account-inbox', function($provide) {
+  beforeEach(module('esn-frontend-account-inbox', function($provide) {
     config = {};
     userId = '123';
     identities = [{
@@ -53,7 +53,7 @@ describe('The identitiesService factory', function() {
 
     it('should return true when user is allowed to edit identity', function(done) {
       session.userIsDomainAdministrator = function() { return false; };
-      config['esn-account-inbox.features.identity'] = {
+      config['esn-frontend-account-inbox.features.identity'] = {
         allowMembersToManage: true
       };
 
@@ -67,7 +67,7 @@ describe('The identitiesService factory', function() {
 
     it('should return false when user is not allowed to edit identity', function(done) {
       session.userIsDomainAdministrator = function() { return false; };
-      config['esn-account-inbox.features.identity'] = {
+      config['esn-frontend-account-inbox.features.identity'] = {
         allowMembersToManage: false
       };
 

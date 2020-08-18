@@ -19,7 +19,7 @@ describe('The inboxIdentities component', function() {
 
   beforeEach(function() {
     module('jadeTemplates');
-    module('esn.account-inbox', function($provide) {
+    module('esn-frontend-account-inbox', function($provide) {
       $provide.value('identitiesService', {
         getAllIdentities: function() {
           return $q.when([{ uuid: 'default' }, { uuid: 'customIdentity1 '}]); // Two identities

@@ -14,7 +14,7 @@ describe('The inboxIdentityFormController', function() {
     userId = '1';
     validEmails = ['a', 'b', 'c'];
 
-    module('esn.account-inbox');
+    module('esn-frontend-account-inbox');
 
     inject(function(
       _$q_,

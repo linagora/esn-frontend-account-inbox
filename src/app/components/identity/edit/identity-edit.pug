@@ -1,4 +1,4 @@
-identity-edit.modal.full-screen
+inbox-identity-edit.modal.full-screen
   form.modal-dialog(name="form", esn-submit="$ctrl.onSaveBtnClick()", ng-init="$ctrl.init()")
     .modal-content
       .modal-header
@@ -7,7 +7,7 @@ identity-edit.modal.full-screen
         h4.modal-title {{ 'Edit identity' | translate }}
       .modal-body.p-t-15
         form(name="form")
-          identity-form(ng-if="$ctrl.identity" identity="$ctrl.identity" user-id="$ctrl.userId")
+          inbox-identity-form(ng-if="$ctrl.identity" identity="$ctrl.identity" user-id="$ctrl.userId")
       .modal-footer.flex
         .flex-vertical-centered.flex-end
           button.btn.btn-link(type="button", ng-click="$hide()")
