@@ -19,6 +19,7 @@ require('esn-frontend-common-libs/src/frontend/js/modules/i18n/i18n.module.js');
 require('esn-frontend-common-libs/src/frontend/js/modules/subheader/subheader.module.js');
 require('esn-frontend-common-libs/src/frontend/js/modules/esn.summernote.js');
 
+require('./app.config.js');
 require('./components/identities/subheader/identities-subheader.js');
 require('./components/identities/tab/identites-tab.component.js');
 require('./components/identities/identities.js');
@@ -35,3 +36,4 @@ require('./components/identity/form/identity-form.js');
 require('./components/identity/form/identity-form.controller.js');
 require('./components/identity/remove/identity-remove.controller.js');
 require('./components/identity/identity.controller.js');
+

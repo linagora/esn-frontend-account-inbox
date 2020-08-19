@@ -1,0 +1,23 @@
+{
+  "A problem occurred while getting data, try refreshing this page": "Возникла проблема при получении данных, попробуйте обновить эту страницу",
+  "Back": "Назад",
+  "Can not open identity form": "Не могу открыть идентификационную форму",
+  "Cancel": "Отмена",
+  "Create": "Создайте",
+  "Create a new identity": "Создать новую личность",
+  "Create identity": "Создать личность",
+  "Default identity": "Идентификация по умолчанию",
+  "Description": "Описание",
+  "Edit identity": "Изменить личность",
+  "Email": "Эл. адрес",
+  "Identities": "Тождества",
+  "Mobile signature": "Подпись мобильный",
+  "Mobile signature will be used on mobile version of OpenPaaS. It can only be textual": "Мобильная подпись будет использоваться в мобильной версии OpenPaaS. Это может быть только текстовое",
+  "Name": "название",
+  "None": "никто",
+  "Remove": "удалять",
+  "Remove identity": "Удалить личность",
+  "Reply to address": "Обратный адрес",
+  "Save": "Сохранить",
+  "Signature": "Подпись"
+}

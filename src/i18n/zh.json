@@ -1,0 +1,23 @@
+{
+  "A problem occurred while getting data, try refreshing this page": "获取数据时出现问题，请尝试刷新此页面",
+  "Back": "背部",
+  "Can not open identity form": "无法打开身份表",
+  "Cancel": "取消",
+  "Create": "创造",
+  "Create a new identity": "建立新身分",
+  "Create identity": "建立身分",
+  "Default identity": "默认身份",
+  "Description": "描述",
+  "Edit identity": "编辑身份",
+  "Email": "电子邮件",
+  "Identities": "身份",
+  "Mobile signature": "手机签名",
+  "Mobile signature will be used on mobile version of OpenPaaS. It can only be textual": "移动签名将用于OpenFaaS的移动版本。只能是文字",
+  "Name": "名称",
+  "None": "没有",
+  "Remove": "去掉",
+  "Remove identity": "删除身份",
+  "Reply to address": "回覆地址",
+  "Save": "保存",
+  "Signature": "签名"
+}
