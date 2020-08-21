@@ -1,0 +1,23 @@
+{
+  "A problem occurred while getting data, try refreshing this page": "Đã xảy ra sự cố khi lấy dữ liệu, hãy thử làm mới trang này",
+  "Back": "Trở lại",
+  "Can not open identity form": "Không thể mở biểu mẫu nhận dạng",
+  "Cancel": "Huỷ bỏ",
+  "Create": "Tạo nên",
+  "Create a new identity": "Tạo danh tính mới",
+  "Create identity": "Tạo bản sắc",
+  "Default identity": "Danh tính mặc định",
+  "Description": "Sự miêu tả",
+  "Edit identity": "Chỉnh sửa danh tính",
+  "Email": "Email",
+  "Identities": "Danh tính",
+  "Mobile signature": "Chữ ký di động",
+  "Mobile signature will be used on mobile version of OpenPaaS. It can only be textual": "Chữ ký di động sẽ được sử dụng trên phiên bản OpenPaaS di động. Nó chỉ có thể là văn bản",
+  "Name": "Tên",
+  "None": "không ai",
+  "Remove": "Tẩy",
+  "Remove identity": "Xóa danh tính",
+  "Reply to address": "Trả lời địa chỉ",
+  "Save": "Tiết kiệm",
+  "Signature": "Chữ ký"
+}

@@ -1,0 +1,23 @@
+{
+  "A problem occurred while getting data, try refreshing this page": "Un problème est survenu lors de l'obtention des données, essayez d'actualiser cette page",
+  "Back": "tour",
+  "Can not open identity form": "Impossible d'ouvrir le formulaire d'identité",
+  "Cancel": "Annuler",
+  "Create": "Créer",
+  "Create a new identity": "Créer une nouvelle identité",
+  "Create identity": "Créer une identité",
+  "Default identity": "Identité par défaut",
+  "Description": "Description",
+  "Edit identity": "Modifier l'identité",
+  "Email": "Email",
+  "Identities": "Identités",
+  "Mobile signature": "Signature mobile",
+  "Mobile signature will be used on mobile version of OpenPaaS. It can only be textual": "La signature mobile sera utilisée sur la version mobile d'OpenPaaS. Cela ne peut être que textuel",
+  "Name": "Nom",
+  "None": "aucun",
+  "Remove": "Supprimer",
+  "Remove identity": "Supprimer l'identité",
+  "Reply to address": "Répondre à l'adresse",
+  "Save": "Enregistrer",
+  "Signature": "Signature"
+}

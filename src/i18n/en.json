@@ -1,0 +1,23 @@
+{
+  "A problem occurred while getting data, try refreshing this page": "A problem occurred while getting data, try refreshing this page",
+  "Back": "Back",
+  "Can not open identity form": "Can not open identity form",
+  "Cancel": "Cancel",
+  "Create": "Create",
+  "Create a new identity": "Create a new identity",
+  "Create identity": "Create identity",
+  "Default identity": "Default identity",
+  "Description": "Description",
+  "Edit identity": "Edit identity",
+  "Email": "Email",
+  "Identities": "Identities",
+  "Mobile signature": "Mobile signature",
+  "Mobile signature will be used on mobile version of OpenPaaS. It can only be textual": "Mobile signature will be used on mobile version of OpenPaaS. It can only be textual",
+  "Name": "Name",
+  "None": "None",
+  "Remove": "Remove",
+  "Remove identity": "Remove identity",
+  "Reply to address": "Reply to address",
+  "Save": "Save",
+  "Signature": "Signature"
+}
