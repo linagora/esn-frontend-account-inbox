@@ -8,7 +8,7 @@ describe('The identitiesService factory', function() {
 
   var $rootScope, config, session, identitiesService, identities, inboxUsersIdentitiesClient, userId;
 
-  beforeEach(module('esn.account-inbox', function($provide) {
+  beforeEach(angular.mock.module('esn.account-inbox', function($provide) {
     config = {};
     userId = '123';
     identities = [{
@@ -29,7 +29,7 @@ describe('The identitiesService factory', function() {
     });
   }));
 
-  beforeEach(inject(function(_$rootScope_, _session_, _identitiesService_, _inboxUsersIdentitiesClient_) {
+  beforeEach(angular.mock.inject(function(_$rootScope_, _session_, _identitiesService_, _inboxUsersIdentitiesClient_) {
     $rootScope = _$rootScope_;
     identitiesService = _identitiesService_;
     inboxUsersIdentitiesClient = _inboxUsersIdentitiesClient_;

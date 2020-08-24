@@ -13,32 +13,32 @@ describe('The inboxIdentityCreateController', function() {
   beforeEach(function() {
     userId = 'userId';
 
-    module('esn.account-inbox');
+    angular.mock.module('esn.account-inbox');
 
-    module(function($provide) {
+    angular.mock.module(function($provide) {
       $provide.value('asyncAction', function(message, action) {
         return action();
       });
     });
 
-    inject(function(
+    angular.mock.inject(function(
       _$q_,
       _$rootScope_,
       _$controller_,
-      _inboxIdentitiesService_,
+      _identitiesService_,
       _INBOX_IDENTITIES_EVENTS_
     ) {
       $q = _$q_;
       $rootScope = _$rootScope_;
       $controller = _$controller_;
       scope = $rootScope.$new();
-      inboxIdentitiesService = _inboxIdentitiesService_;
+      inboxIdentitiesService = _identitiesService_;
       INBOX_IDENTITIES_EVENTS = _INBOX_IDENTITIES_EVENTS_;
     });
   });
 
   function initController() {
-    var controller = $controller('inboxIdentityCreateController', {
+    var controller = $controller('identityCreateController', {
       $scope: scope,
       userId: userId
     });

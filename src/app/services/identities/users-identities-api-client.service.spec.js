@@ -5,9 +5,9 @@ describe('The inboxUsersIdentitiesClient service', function() {
   var $httpBackend;
   var inboxUsersIdentitiesClient;
 
-  beforeEach(module('esn.account-inbox'));
+  beforeEach(angular.mock.module('esn.account-inbox'));
 
-  beforeEach(inject(function(_$httpBackend_, _inboxUsersIdentitiesClient_) {
+  beforeEach(angular.mock.inject(function(_$httpBackend_, _inboxUsersIdentitiesClient_) {
     $httpBackend = _$httpBackend_;
     inboxUsersIdentitiesClient = _inboxUsersIdentitiesClient_;
   }));
