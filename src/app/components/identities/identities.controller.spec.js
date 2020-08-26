@@ -15,9 +15,9 @@ describe('The inboxIdentitiesController', function() {
     identities = [{ a: 1 }, { b: 2 }];
     user = { _id: 'userId' };
 
-    module('esn.account-inbox');
+    angular.mock.module('esn.account-inbox');
 
-    inject(function(
+    angular.mock.inject(function(
       _$q_,
       _$rootScope_,
       _$controller_,
@@ -50,7 +50,7 @@ describe('The inboxIdentitiesController', function() {
       identitiesService.canEditIdentities = sinon.stub().returns($q.when(canEdit));
       identitiesService.getAllIdentities = sinon.stub().returns($q.when(identities));
 
-      var controller = initController('inboxIdentitiesController');
+      var controller = initController('identitiesController');
 
       expect(identitiesService.getAllIdentities).to.have.been.calledOnce;
       expect(controller.status).to.equal('loaded');
@@ -60,7 +60,7 @@ describe('The inboxIdentitiesController', function() {
       identitiesService.canEditIdentities = sinon.stub().returns($q.when(canEdit));
       identitiesService.getAllIdentities = sinon.stub().returns($q.reject());
 
-      var controller = initController('inboxIdentitiesController');
+      var controller = initController('identitiesController');
 
       expect(identitiesService.getAllIdentities).to.have.been.calledOnce;
       expect(controller.status).to.equal('error');
@@ -70,7 +70,7 @@ describe('The inboxIdentitiesController', function() {
       identitiesService.canEditIdentities = sinon.stub().returns($q.when(canEdit));
       identitiesService.getAllIdentities = sinon.stub().returns($q.when(identities));
 
-      var controller = initController('inboxIdentitiesController');
+      var controller = initController('identitiesController');
 
       expect(identitiesService.canEditIdentities).to.have.been.calledOnce;
       expect(controller.canEdit).to.equal(canEdit);
@@ -80,7 +80,7 @@ describe('The inboxIdentitiesController', function() {
       identitiesService.canEditIdentities = sinon.stub().returns($q.when(canEdit));
       identitiesService.getAllIdentities = sinon.stub().returns($q.when(identities));
 
-      var controller = initController('inboxIdentitiesController');
+      var controller = initController('identitiesController');
 
       expect(identitiesService.getAllIdentities).to.have.been.calledWith(user._id);
       expect(controller.identities).to.deep.equal(identities);
@@ -92,7 +92,7 @@ describe('The inboxIdentitiesController', function() {
       };
 
       var newIdentities = [{ c: 'd', e: 'f' }];
-      var controller = initController('inboxIdentitiesController');
+      var controller = initController('identitiesController');
 
       $rootScope.$broadcast(INBOX_IDENTITIES_EVENTS.UPDATED, newIdentities);
 

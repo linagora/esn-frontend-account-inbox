@@ -18,8 +18,7 @@ describe('The inboxIdentities component', function() {
   }
 
   beforeEach(function() {
-    module('jadeTemplates');
-    module('esn.account-inbox', function($provide) {
+    angular.mock.module('esn.account-inbox', function($provide) {
       $provide.value('identitiesService', {
         getAllIdentities: function() {
           return $q.when([{ uuid: 'default' }, { uuid: 'customIdentity1 '}]); // Two identities
@@ -34,7 +33,7 @@ describe('The inboxIdentities component', function() {
     });
   });
 
-  beforeEach(inject(function(_$compile_, _$rootScope_) {
+  beforeEach(angular.mock.inject(function(_$compile_, _$rootScope_) {
     $compile = _$compile_;
     $rootScope = _$rootScope_;
   }));
@@ -42,7 +41,7 @@ describe('The inboxIdentities component', function() {
   it('should add one child element per user identity', function() {
     compileDirective('<inbox-identities user="{}" />');
 
-    expect(element.find('inbox-identity')).to.have.length(2);
+    expect(element.find('identity')).to.have.length(2);
   });
 
 });

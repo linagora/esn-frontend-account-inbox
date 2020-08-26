@@ -14,9 +14,9 @@ describe('The inboxIdentityFormController', function() {
     userId = '1';
     validEmails = ['a', 'b', 'c'];
 
-    module('esn.account-inbox');
+    angular.mock.module('esn.account-inbox');
 
-    inject(function(
+    angular.mock.inject(function(
       _$q_,
       _$rootScope_,
       _$controller_,
@@ -48,7 +48,7 @@ describe('The inboxIdentityFormController', function() {
     it('should set status to loaded when success loading form', function() {
       inboxUsersIdentitiesClient.getValidEmails = sinon.stub().returns($q.when(validEmails));
 
-      var controller = initController('inboxIdentityFormController');
+      var controller = initController('identityFormController');
 
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledOnce;
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledWith(userId);
@@ -58,7 +58,7 @@ describe('The inboxIdentityFormController', function() {
     it('should set status to error when failed to loading form', function() {
       inboxUsersIdentitiesClient.getValidEmails = sinon.stub().returns($q.reject());
 
-      var controller = initController('inboxIdentityFormController');
+      var controller = initController('identityFormController');
 
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledOnce;
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledWith(userId);
@@ -68,7 +68,7 @@ describe('The inboxIdentityFormController', function() {
     it('should display email of identity if it has', function() {
       inboxUsersIdentitiesClient.getValidEmails = sinon.stub().returns($q.when(validEmails));
 
-      var controller = initController('inboxIdentityFormController');
+      var controller = initController('identityFormController');
 
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledOnce;
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledWith(userId);
@@ -78,7 +78,7 @@ describe('The inboxIdentityFormController', function() {
     it('should display replyTo of identity if it has', function() {
       inboxUsersIdentitiesClient.getValidEmails = sinon.stub().returns($q.when(validEmails));
 
-      var controller = initController('inboxIdentityFormController');
+      var controller = initController('identityFormController');
 
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledOnce;
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledWith(userId);
@@ -89,7 +89,7 @@ describe('The inboxIdentityFormController', function() {
       identity.email = undefined;
       inboxUsersIdentitiesClient.getValidEmails = sinon.stub().returns($q.when(validEmails));
 
-      var controller = initController('inboxIdentityFormController');
+      var controller = initController('identityFormController');
 
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledOnce;
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledWith(userId);
@@ -100,7 +100,7 @@ describe('The inboxIdentityFormController', function() {
       identity.replyTo = undefined;
       inboxUsersIdentitiesClient.getValidEmails = sinon.stub().returns($q.when(validEmails));
 
-      var controller = initController('inboxIdentityFormController');
+      var controller = initController('identityFormController');
 
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledOnce;
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledWith(userId);
@@ -110,7 +110,7 @@ describe('The inboxIdentityFormController', function() {
     it('should display a none email option in reply-to dropdown select', function() {
       inboxUsersIdentitiesClient.getValidEmails = sinon.stub().returns($q.when(validEmails));
 
-      var controller = initController('inboxIdentityFormController');
+      var controller = initController('identityFormController');
 
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledOnce;
       expect(inboxUsersIdentitiesClient.getValidEmails).to.have.been.calledWith(userId);
@@ -122,7 +122,7 @@ describe('The inboxIdentityFormController', function() {
     it('should set identity reply-to email to empty string when select none option', function() {
       inboxUsersIdentitiesClient.getValidEmails = sinon.stub().returns($q.when(validEmails));
 
-      var controller = initController('inboxIdentityFormController');
+      var controller = initController('identityFormController');
 
       controller.selectedReplyToEmail = 'None';
       controller.onReplyToChange();
@@ -133,7 +133,7 @@ describe('The inboxIdentityFormController', function() {
     it('should set identity reply-to email to selected emails when select an email', function() {
       inboxUsersIdentitiesClient.getValidEmails = sinon.stub().returns($q.when(validEmails));
 
-      var controller = initController('inboxIdentityFormController');
+      var controller = initController('identityFormController');
 
       controller.selectedReplyToEmail = validEmails[2];
       controller.onReplyToChange();

@@ -14,15 +14,16 @@ describe('The inboxIdentityRemoveController', function() {
     userId = 'userId';
     identity = { uuid: 'uuid' };
 
-    module('esn.account-inbox');
+    angular.mock.module('esn.account-inbox');
+    angular.mock.module('linagora.esn.unifiedinbox')
 
-    module(function($provide) {
+    angular.mock.module(function($provide) {
       $provide.value('asyncAction', function(message, action) {
         return action();
       });
     });
 
-    inject(function(
+    angular.mock.inject(function(
       _$q_,
       _$rootScope_,
       _$controller_,
@@ -39,7 +40,7 @@ describe('The inboxIdentityRemoveController', function() {
   });
 
   function initController() {
-    var controller = $controller('inboxIdentityRemoveController', {
+    var controller = $controller('identityRemoveController', {
       $scope: scope,
       userId: userId,
       identity: identity
