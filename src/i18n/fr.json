@@ -9,7 +9,6 @@
   "Default identity": "Identité par défaut",
   "Description": "Description",
   "Edit identity": "Modifier l'identité",
-  "Email": "Email",
   "Identities": "Identités",
   "Mobile signature": "Signature mobile",
   "Mobile signature will be used on mobile version of OpenPaaS. It can only be textual": "La signature mobile sera utilisée sur la version mobile d'OpenPaaS. Cela ne peut être que textuel",
@@ -18,6 +17,5 @@
   "Remove": "Supprimer",
   "Remove identity": "Supprimer l'identité",
   "Reply to address": "Répondre à l'adresse",
-  "Save": "Enregistrer",
   "Signature": "Signature"
 }
