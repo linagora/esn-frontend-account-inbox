@@ -9,7 +9,6 @@
   "Default identity": "Идентификация по умолчанию",
   "Description": "Описание",
   "Edit identity": "Изменить личность",
-  "Email": "Эл. адрес",
   "Identities": "Тождества",
   "Mobile signature": "Подпись мобильный",
   "Mobile signature will be used on mobile version of OpenPaaS. It can only be textual": "Мобильная подпись будет использоваться в мобильной версии OpenPaaS. Это может быть только текстовое",
@@ -18,6 +17,5 @@
   "Remove": "удалять",
   "Remove identity": "Удалить личность",
   "Reply to address": "Обратный адрес",
-  "Save": "Сохранить",
   "Signature": "Подпись"
 }

@@ -9,7 +9,6 @@
   "Default identity": "Danh tính mặc định",
   "Description": "Sự miêu tả",
   "Edit identity": "Chỉnh sửa danh tính",
-  "Email": "Email",
   "Identities": "Danh tính",
   "Mobile signature": "Chữ ký di động",
   "Mobile signature will be used on mobile version of OpenPaaS. It can only be textual": "Chữ ký di động sẽ được sử dụng trên phiên bản OpenPaaS di động. Nó chỉ có thể là văn bản",
@@ -18,6 +17,5 @@
   "Remove": "Tẩy",
   "Remove identity": "Xóa danh tính",
   "Reply to address": "Trả lời địa chỉ",
-  "Save": "Tiết kiệm",
   "Signature": "Chữ ký"
 }
