@@ -17,7 +17,11 @@ module.exports = function(config) {
     browsers: ['FirefoxHeadless'],
 
     customLaunchers: {
-      FirefoxHeadless: { base: 'Firefox', flags: ['--headless'] },
+      FirefoxHeadless: {
+        base: 'Firefox',
+        flags: ['--headless'],
+        prefs: { 'network.proxy.type': 0 }
+      }
     },
 
     proxies: {
@@ -37,8 +41,6 @@ module.exports = function(config) {
       'karma-webpack',
       'karma-spec-reporter',
       'karma-sinon-chai'
-    ],
-
-    coverageReporter: { type: 'text', dir: '/tmp' }
+    ]
   });
 };
