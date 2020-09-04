@@ -28,7 +28,7 @@ function identityRemoveController(
       progressing: 'Removing identity...',
       success: 'Identity removed',
       failure: 'Failed to remove identity'
-    }, function () {
+    }, function() {
       return _removeIdentity();
     });
   }

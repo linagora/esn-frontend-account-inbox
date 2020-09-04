@@ -28,7 +28,7 @@ function identityCreateController(
       progressing: 'Creating identity...',
       success: 'Identity created',
       failure: 'Failed to create identity'
-    }, function () {
+    }, function() {
       return _storeIdentity();
     });
   }

@@ -20,7 +20,7 @@ describe('The inboxIdentityFormController', function() {
       _$q_,
       _$rootScope_,
       _$controller_,
-      _inboxUsersIdentitiesClient_,
+      _inboxUsersIdentitiesClient_
     ) {
       $q = _$q_;
       $rootScope = _$rootScope_;
@@ -36,8 +36,7 @@ describe('The inboxIdentityFormController', function() {
       {
         userId: userId,
         identity: identity
-      }
-    );
+      });
 
     controller.$onInit();
     scope.$digest();

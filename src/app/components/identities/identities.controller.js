@@ -1,10 +1,10 @@
 'use strict';
 
-require('../../services/identities/identities.service')
-require('./identities.constants.js')
+require('../../services/identities/identities.service');
+require('./identities.constants.js');
 
 angular.module('esn.account-inbox')
-  .controller('identitiesController', function (
+  .controller('identitiesController', function(
     $q,
     $modal,
     $scope,
@@ -23,14 +23,14 @@ angular.module('esn.account-inbox')
         identitiesService.canEditIdentities(),
         identitiesService.getAllIdentities(self.user._id)
       ])
-        .then(function (results) {
+        .then(function(results) {
           self.status = 'loaded';
           self.canEdit = results[0];
           self.identities = results[1];
 
           $scope.$on(INBOX_IDENTITIES_EVENTS.UPDATED, onUpdatedIdentitiesEvent);
         })
-        .catch(function () {
+        .catch(function() {
           self.status = 'error';
         });
     }
@@ -42,7 +42,7 @@ angular.module('esn.account-inbox')
 
     function openCreateForm() {
       $modal({
-        template: require("../identity/create/identity-create.pug"),
+        template: require('../identity/create/identity-create.pug'),
         backdrop: 'static',
         placement: 'center',
         controllerAs: '$ctrl',

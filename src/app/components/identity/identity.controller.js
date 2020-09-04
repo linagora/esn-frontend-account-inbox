@@ -2,7 +2,7 @@
 
 angular.module('esn.account-inbox')
 
-  .controller('identityController', function (
+  .controller('identityController', function(
     $modal
   ) {
     var self = this;
@@ -14,7 +14,7 @@ angular.module('esn.account-inbox')
 
     function onEditBtnClick() {
       $modal({
-        template: require("./edit/identity-edit.pug"),
+        template: require('./edit/identity-edit.pug'),
         backdrop: 'static',
         placement: 'center',
         controllerAs: '$ctrl',
@@ -28,7 +28,7 @@ angular.module('esn.account-inbox')
 
     function onRemoveBtnClick() {
       $modal({
-        template: require("./remove/identity-remove.pug"),
+        template: require('./remove/identity-remove.pug'),
         backdrop: 'static',
         placement: 'center',
         controllerAs: '$ctrl',

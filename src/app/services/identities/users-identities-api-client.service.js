@@ -18,7 +18,7 @@ function inboxUsersIdentitiesClient(inboxRestangular, Restangular) {
    */
   function getIdentities(userId) {
     return inboxRestangular.one('users', userId).all('identities').getList()
-      .then(function (response) {
+      .then(function(response) {
         return Restangular.stripRestangular(response.data);
       });
   }
@@ -32,7 +32,7 @@ function inboxUsersIdentitiesClient(inboxRestangular, Restangular) {
    */
   function updateIdentities(userId, identities) {
     return inboxRestangular.one('users', userId).all('identities').customPUT(identities)
-      .then(function (response) {
+      .then(function(response) {
         return Restangular.stripRestangular(response.data);
       });
   }
@@ -45,7 +45,7 @@ function inboxUsersIdentitiesClient(inboxRestangular, Restangular) {
    */
   function getValidEmails(userId) {
     return inboxRestangular.one('users', userId).all('identities').all('validEmails').getList()
-      .then(function (response) {
+      .then(function(response) {
         return response.data;
       });
   }

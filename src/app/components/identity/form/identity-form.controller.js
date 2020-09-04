@@ -1,11 +1,10 @@
 'use strict';
 
-const _ = require('lodash');
 require('../../../services/identities/users-identities-api-client.service.js');
 
 angular.module('esn.account-inbox')
 
-  .controller('identityFormController', function (
+  .controller('identityFormController', function(
     $scope,
     esnI18nService,
     inboxUsersIdentitiesClient,
@@ -28,7 +27,7 @@ angular.module('esn.account-inbox')
       self.initiallyDefaultIdentity = self.identity.default;
 
       return inboxUsersIdentitiesClient.getValidEmails(self.userId)
-        .then(function (validEmails) {
+        .then(function(validEmails) {
           self.status = 'loaded';
           self.validEmails = validEmails;
           self.identity.email = self.identity.email || validEmails[0];
@@ -37,7 +36,7 @@ angular.module('esn.account-inbox')
           self.validReplyToEmails.unshift(noneEmail);
           self.selectedReplyToEmail = self.identity.replyTo || noneEmail;
         })
-        .catch(function () {
+        .catch(function() {
           self.status = 'error';
         });
     }

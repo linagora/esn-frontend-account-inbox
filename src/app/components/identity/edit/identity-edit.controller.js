@@ -29,7 +29,7 @@ function identityEditController(
       progressing: 'Saving identity...',
       success: 'Identity saved',
       failure: 'Could not save identity'
-    }, function () {
+    }, function() {
       return _storeIdentity();
     });
   }
