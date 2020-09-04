@@ -3,5 +3,5 @@
 angular.module('esn.account-inbox')
 
   .component('inboxIdentitiesSubheader', {
-    template: require("./identities-subheader.pug")
+    template: require('./identities-subheader.pug')
   });

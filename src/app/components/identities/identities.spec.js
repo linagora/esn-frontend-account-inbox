@@ -21,7 +21,7 @@ describe('The inboxIdentities component', function() {
     angular.mock.module('esn.account-inbox', function($provide) {
       $provide.value('identitiesService', {
         getAllIdentities: function() {
-          return $q.when([{ uuid: 'default' }, { uuid: 'customIdentity1 '}]); // Two identities
+          return $q.when([{ uuid: 'default' }, { uuid: 'customIdentity1 ' }]); // Two identities
         },
         getIdentity: function(uuid) {
           return $q.when({ uuid: uuid });

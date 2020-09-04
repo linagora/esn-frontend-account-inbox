@@ -1,11 +1,12 @@
 'use strict';
 
 const _ = require('lodash');
+
 require('./users-identities-api-client.service.js');
 
 angular.module('esn.account-inbox')
 
-  .factory('identitiesService', function (
+  .factory('identitiesService', function(
     $q,
     session,
     esnConfig,
@@ -27,7 +28,7 @@ angular.module('esn.account-inbox')
         $q.when(true) :
         esnConfig('esn-account-inbox.features.identity', {
           allowMembersToManage: false
-        }).then(function (identity) {
+        }).then(function(identity) {
           return identity.allowMembersToManage;
         });
     }
@@ -41,7 +42,7 @@ angular.module('esn.account-inbox')
     function getDefaultIdentity(userId) {
       userId = userId || session.user._id;
 
-      return getAllIdentities(userId).then(function (identities) {
+      return getAllIdentities(userId).then(function(identities) {
         return _.find(identities, { default: true });
       });
     }
@@ -49,7 +50,7 @@ angular.module('esn.account-inbox')
     function storeIdentity(identity, userId) {
       userId = userId || session.user._id;
 
-      return getAllIdentities(userId).then(function (identities) {
+      return getAllIdentities(userId).then(function(identities) {
         var targetIdentity = _.find(identities, { uuid: identity.uuid });
 
         if (targetIdentity) {
@@ -98,7 +99,7 @@ angular.module('esn.account-inbox')
     function removeIdentity(identityId, userId) {
       userId = userId || session.user._id;
 
-      return getAllIdentities(userId).then(function (identities) {
+      return getAllIdentities(userId).then(function(identities) {
         var targetIdentity = _.find(identities, { uuid: identityId });
 
         if (!targetIdentity) {

@@ -3,7 +3,7 @@
 angular.module('esn.account-inbox')
 
   .component('identity', {
-    template: require("./identity.pug"),
+    template: require('./identity.pug'),
     bindings: {
       identity: '<',
       canEdit: '<',

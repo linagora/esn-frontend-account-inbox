@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const commonLibsPath = path.resolve(__dirname, 'node_modules', 'esn-frontend-common-libs');
 const angularCommon = path.resolve(__dirname, 'node_modules', 'esn-frontend-common-libs', 'src', 'angular-common.js');
 const angularInjections = path.resolve(__dirname, 'src', 'require-angular-injections.js');
-const chartJs = path.resolve(__dirname, 'node_modules', 'esn-frontend-common-libs', 'src', 'frontend', 'components', 'Chart.js/Chart.js')
+const chartJs = path.resolve(__dirname, 'node_modules', 'esn-frontend-common-libs', 'src', 'frontend', 'components', 'Chart.js/Chart.js');
 const materialAdmin = path.resolve(__dirname, 'node_modules', 'esn-frontend-common-libs', 'src', 'frontend', 'js', 'material.js');
 const momentPath = path.resolve(__dirname, 'node_modules', 'moment', 'moment.js');
 const pugLoaderOptions = {
@@ -17,13 +17,13 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   resolve: {
     alias: {
       'moment/moment.js': momentPath,
-      'moment$': momentPath
-    },
+      moment$: momentPath
+    }
   },
   plugins: [
     new webpack.IgnorePlugin({ resourceRegExp: /codemirror/ }), // for summernote
@@ -33,15 +33,15 @@ module.exports = {
       $: 'jquery',
       'window.jQuery': 'jquery',
       'window.$': 'jquery',
-      'Chart': chartJs,
+      Chart: chartJs,
       materialAdmin: materialAdmin,
       angular: angularCommon,
       'window.angularInjections': angularInjections,
       angularDragula: 'angularjs-dragula/angularjs-dragula.js', // for unifiedinbox
       sanitizeHtml: 'sanitize-html', // for unifiedinbox
       DOMPurify: 'dompurify', // for unifiedinbox
-      localforage: 'localforage', // for calendar
-    }),
+      localforage: 'localforage' // for calendar
+    })
   ],
   module: {
     rules: [
@@ -59,8 +59,8 @@ module.exports = {
         test: require.resolve('jmap-draft-client/dist/jmap-draft-client.js'),
         loader: 'expose-loader',
         options: {
-          exposes: 'jmapDraft',
-        },
+          exposes: 'jmapDraft'
+        }
       },
       /*
       for esn-frontend-common-libs
@@ -78,8 +78,8 @@ module.exports = {
         test: require.resolve('email-addresses'),
         loader: 'expose-loader',
         options: {
-          exposes: 'emailAddresses',
-        },
+          exposes: 'emailAddresses'
+        }
       },
       /*
       for esn-frontend-common-libs
@@ -96,8 +96,8 @@ module.exports = {
         test: require.resolve('autosize'),
         loader: 'expose-loader',
         options: {
-          exposes: 'autosize',
-        },
+          exposes: 'autosize'
+        }
       },
       /*
       for esn-frontend-common-libs
@@ -115,8 +115,8 @@ module.exports = {
         test: require.resolve(commonLibsPath + '/src/frontend/components/Autolinker.js/dist/Autolinker.js'),
         loader: 'expose-loader',
         options: {
-          exposes: 'Autolinker',
-        },
+          exposes: 'Autolinker'
+        }
       },
       /*
       for angular-jstz in esn-frontend-common-libs
@@ -126,9 +126,9 @@ module.exports = {
         loader: 'expose-loader',
         options: {
           exposes: [
-            "jstz"
-          ],
-        },
+            'jstz'
+          ]
+        }
       },
       /*
         usefull, at least for esn-frontend-common-libs / notification.js:
@@ -140,25 +140,25 @@ module.exports = {
         test: require.resolve('jquery'),
         loader: 'expose-loader',
         options: {
-          exposes: '$',
-        },
+          exposes: '$'
+        }
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
-            loader: 'file-loader',
-          },
-        ],
+            loader: 'file-loader'
+          }
+        ]
       },
       {
         test: /all\.less$/,
         use: [
           {
-            loader: 'style-loader', // creates style nodes from JS strings
+            loader: 'style-loader' // creates style nodes from JS strings
           },
           {
-            loader: 'css-loader', // translates CSS into CommonJS
+            loader: 'css-loader' // translates CSS into CommonJS
           },
           {
             loader: 'less-loader', // compiles Less to CSS
@@ -174,9 +174,9 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'url-loader',
-          },
-        ],
+            loader: 'url-loader'
+          }
+        ]
       },
       {
         test: /\.svg$/,
@@ -190,17 +190,17 @@ module.exports = {
         test: /assets\/index\.pug$/,
         use: [
           {
-            loader: 'html-loader',
+            loader: 'html-loader'
           },
           {
-            loader:'pug-html-loader',
+            loader: 'pug-html-loader',
             options: {
               data: {
-                base: BASE_HREF,
-              },
-            },
-          },
-        ],
+                base: BASE_HREF
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.pug$/i,
@@ -210,22 +210,22 @@ module.exports = {
         ],
         use: [
           {
-            loader: 'apply-loader',
+            loader: 'apply-loader'
           },
           {
             loader: 'pug-loader',
             options: pugLoaderOptions
-          },
-        ],
+          }
+        ]
       },
       {
         test: /jmap-empty-message\.pug$/,
         use: [
           {
-            loader: 'pug-loader',
-          },
-        ],
-      },
-    ],
-  },
-}
+            loader: 'pug-loader'
+          }
+        ]
+      }
+    ]
+  }
+};

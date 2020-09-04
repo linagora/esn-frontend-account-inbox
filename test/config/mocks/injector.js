@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('global.$q', []).run(function ($q) {
+angular.module('global.$q', []).run(function($q) {
   window.$q = $q;
 });
 
