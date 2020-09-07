@@ -32,7 +32,7 @@ angular.module('esn.account-inbox')
         backdrop: 'static',
         placement: 'center',
         controllerAs: '$ctrl',
-        controller: 'ientityRemoveController',
+        controller: 'identityRemoveController',
         locals: {
           identity: self.identity,
           userId: self.user._id
