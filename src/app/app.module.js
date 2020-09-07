@@ -12,6 +12,7 @@ angular.module('esn.account-inbox', [
 
 require('esn-frontend-inbox/src/esn.inbox.libs/app/app.constants.js');
 require('esn-frontend-inbox/src/esn.inbox.libs/app/services/inbox-restangular.service.js');
+require('esn-frontend-inbox/src/esn.inbox.libs/app/services/identities/inbox-identities.service.js');
 require('esn-frontend-common-libs/src/frontend/js/modules/config/config.module.js');
 require('esn-frontend-common-libs/src/frontend/js/modules/session.js');
 require('esn-frontend-common-libs/src/frontend/js/modules/async-action.js');

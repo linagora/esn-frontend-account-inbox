@@ -7,6 +7,4 @@ angular.module('esn.inbox.libs', [])
   .filter('sanitizeStylisedHtml', function() {
     return '';
   });
-
-angular.module('linagora.esn.unifiedinbox', [])
-  .service('inboxIdentitiesService', noop);
+angular.module('linagora.esn.unifiedinbox', []);
