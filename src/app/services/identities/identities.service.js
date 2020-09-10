@@ -26,7 +26,7 @@ angular.module('esn.account-inbox')
     function canEditIdentities() {
       return session.userIsDomainAdministrator() ?
         $q.when(true) :
-        esnConfig('esn-account-inbox.features.identity', {
+        esnConfig('linagora.esn.unifiedinbox.features.identity', {
           allowMembersToManage: false
         }).then(function(identity) {
           return identity.allowMembersToManage;

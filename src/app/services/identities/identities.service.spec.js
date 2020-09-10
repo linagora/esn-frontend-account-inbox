@@ -53,7 +53,7 @@ describe('The identitiesService factory', function() {
 
     it('should return true when user is allowed to edit identity', function(done) {
       session.userIsDomainAdministrator = function() { return false; };
-      config['esn-account-inbox.features.identity'] = {
+      config['linagora.esn.unifiedinbox.features.identity'] = {
         allowMembersToManage: true
       };
 
@@ -67,7 +67,7 @@ describe('The identitiesService factory', function() {
 
     it('should return false when user is not allowed to edit identity', function(done) {
       session.userIsDomainAdministrator = function() { return false; };
-      config['esn-account-inbox.features.identity'] = {
+      config['linagora.esn.unifiedinbox.features.identity'] = {
         allowMembersToManage: false
       };
 
