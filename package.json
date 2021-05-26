@@ -11,8 +11,8 @@
     "author": "",
     "license": "AGPLv3",
     "dependencies": {
-        "esn-frontend-common-libs": "github:openpaas-suite/esn-frontend-common-libs#main",
-        "esn-frontend-inbox": "github:OpenPaaS-Suite/esn-frontend-inbox#main"
+        "esn-frontend-common-libs": "github:linagora/esn-frontend-common-libs#main",
+        "esn-frontend-inbox": "github:linagora/esn-frontend-inbox#main"
     },
     "devDependencies": {
         "@linagora/eslint-config-linagora-esn": "^2.0.0",
